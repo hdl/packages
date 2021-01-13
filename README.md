@@ -1,3 +1,8 @@
+<p align="center">
+  <a title="hdl/community on gitter.im" href="https://gitter.im/hdl/community"><img src="https://img.shields.io/gitter/room/hdl/community.svg?longCache=true&style=flat-square&logo=gitter&logoColor=fff&color=4db797"></a><!--
+  -->
+</p>
+
 # Packages for electronic design automation (EDA)
 
 This repository is an index for several projects providing *great prepackaged/prebuilt and easy-to-set-up* bleeding-edge packages/environments of [electronic design automation (EDA)](https://en.wikipedia.org/wiki/Electronic_design_automation) tools/projects. Find a discussion about the different approaches in [CONTEXT.md](CONTEXT.md).
