@@ -23,7 +23,7 @@ This repository is an index for several projects providing *great prepackaged/pr
   - [Bazel](https://bazel.build/) rules: see [hdl/bazel_rules_hdl](https://github.com/hdl/bazel_rules_hdl).
   - [Conda](https://conda.io) packages: see [litex-hub/litex-conda-packages](https://github.com/litex-hub/litex-conda-packages) ([litex-hub/litex-conda-eda](https://github.com/litex-hub/litex-conda-eda), [litex-hub/litex-conda-compilers](https://github.com/litex-hub/litex-conda-compilers), [litex-hub/litex-conda-prog](https://github.com/litex-hub/litex-conda-prog), [litex-hub/litex-conda-misc](https://github.com/litex-hub/litex-conda-misc), etc.).
 - Statically built packages
-  - See [open-tool-forge/fpga-toolchain](https://github.com/open-tool-forge/fpga-toolchain) (GNU/Linux, Windows and macOS).
+  - See [YosysHQ/fpga-toolchain](https://github.com/YosysHQ/fpga-toolchain) (GNU/Linux, Windows and macOS).
 - [WebAssembly](https://webassembly.org/) packages
   - See [YoWASP](http://yowasp.org/).
 - CIPD (Chrome Infrastructure Package Deployment)

@@ -8,7 +8,7 @@ Several alternatives arised in the open source EDA community for making it easie
 
 ## Statically pre-built packages
 
-This provides the easiest setup approach and it allows having multiple versions of the toolchains, without running into conflicts. However, some features are limited when tools are built statically. See [open-tool-forge/fpga-toolchain: DEVELOPMENT.md > General guidelines](https://github.com/open-tool-forge/fpga-toolchain/blob/main/DEVELOPMENT.md#general-guidelines).
+This provides the easiest setup approach and it allows having multiple versions of the toolchains, without running into conflicts. However, some features are limited when tools are built statically. See [YosysHQ/fpga-toolchain: DEVELOPMENT.md > General guidelines](https://github.com/YosysHQ/fpga-toolchain/blob/main/DEVELOPMENT.md#general-guidelines).
 
 ## OCI container images
 
@@ -32,7 +32,7 @@ Bazel is an open-source build and test tool similar to Make, Maven, and Gradle, 
 
 ## WebAssembly packages
 
-[YoWASP](http://yowasp.org/) aims to distribute tools form [YosysHQ](https://github.com/YosysHQ/) compiled to [WebAssembly](https://webassembly.org/) via language package managers like Python’s [PyPI](https://pypi.org/).
+[YoWASP](http://yowasp.org/) aims to distribute tools from [YosysHQ](https://github.com/YosysHQ/) compiled to [WebAssembly](https://webassembly.org/) via language package managers like Python’s [PyPI](https://pypi.org/).
 
 ---
 
