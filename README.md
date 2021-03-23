@@ -12,6 +12,13 @@ This repository is an index for several projects providing *great prepackaged/pr
 ---
 
 - OCI container images (aka [Docker](https://www.docker.com/)/[Podman](https://podman.io/)) [![](https://img.shields.io/badge/hdl-containers-f2f1ef.svg?longCache=true&style=flat-square&logo=GitHub&logoColor=f2f1ef)](https://github.com/hdl/containers) [![](https://img.shields.io/website.svg?label=hdl.github.io%2Fcontainers&longCache=true&style=flat-square&url=http%3A%2F%2Fhdl.github.io%2Fcontainers%2Findex.html&logo=Asciidoctor&logoColor=fff)](https://hdl.github.io/containers)
+- Multiplatform package managers
+  - [Bazel](https://bazel.build/) rules [![](https://img.shields.io/badge/hdl-bazel__rules__hdl-f2f1ef.svg?longCache=true&style=flat-square&logo=GitHub&logoColor=f2f1ef)](https://github.com/hdl/bazel_rules_hdl)
+  - [Conda](https://conda.io) packages
+    - [![](https://img.shields.io/badge/hdl-conda--eda-f2f1ef.svg?longCache=true&style=flat-square&logo=GitHub&logoColor=f2f1ef)](https://github.com/hdl/conda-eda) [![](https://img.shields.io/badge/hdl-conda--compilers-f2f1ef.svg?longCache=true&style=flat-square&logo=GitHub&logoColor=f2f1ef)](https://github.com/hdl/conda-compilers) [![](https://img.shields.io/badge/hdl-conda--prog-f2f1ef.svg?longCache=true&style=flat-square&logo=GitHub&logoColor=f2f1ef)](https://github.com/hdl/conda-prog) [![](https://img.shields.io/badge/hdl-conda--misc-f2f1ef.svg?longCache=true&style=flat-square&logo=GitHub&logoColor=f2f1ef)](https://github.com/hdl/conda-misc)
+    - [litex-hub/litex-conda-packages](https://github.com/litex-hub/litex-conda-packages)
+- Statically built packages
+  - [YosysHQ/fpga-toolchain](https://github.com/YosysHQ/fpga-toolchain) (GNU/Linux, Windows and macOS).
 - System package managers
   - PKGBUILD (`pacman`)
     - [Arch Linux](https://archlinux.org)
@@ -38,12 +45,6 @@ This repository is an index for several projects providing *great prepackaged/pr
     - [NixOS/nixpkgs](https://github.com/NixOS/nixpkgs)
   - `brew` (macOS)
     - [ktemkin/homebrew-oss-fpga](https://github.com/ktemkin/homebrew-oss-fpga)
-- Multiplatform package managers
-  - [Bazel](https://bazel.build/) rules [![](https://img.shields.io/badge/hdl-bazel__rules__hdl-f2f1ef.svg?longCache=true&style=flat-square&logo=GitHub&logoColor=f2f1ef)](https://github.com/hdl/bazel_rules_hdl)
-  - [Conda](https://conda.io) packages
-    - [litex-hub/litex-conda-packages](https://github.com/litex-hub/litex-conda-packages) ([litex-hub/litex-conda-eda](https://github.com/litex-hub/litex-conda-eda), [litex-hub/litex-conda-compilers](https://github.com/litex-hub/litex-conda-compilers), [litex-hub/litex-conda-prog](https://github.com/litex-hub/litex-conda-prog), [litex-hub/litex-conda-misc](https://github.com/litex-hub/litex-conda-misc), etc.)
-- Statically built packages
-  - [YosysHQ/fpga-toolchain](https://github.com/YosysHQ/fpga-toolchain) (GNU/Linux, Windows and macOS).
 - [WebAssembly](https://webassembly.org/) packages
   - [YoWASP](http://yowasp.org/).
 - CIPD (Chrome Infrastructure Package Deployment)
