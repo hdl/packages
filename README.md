@@ -26,6 +26,7 @@ This repository is an index for several projects providing *great prepackaged/pr
       - [aur.archlinux.org/packages](https://aur.archlinux.org/packages)
       - [SymbiFlow/symbiflow-arch-pkgs](https://github.com/SymbiFlow/symbiflow-arch-pkgs).
     - [MSYS2](https://www.msys2.org/) (Windows) [![](https://img.shields.io/badge/hdl-MINGW--packages-f2f1ef.svg?longCache=true&style=flat-square&logo=GitHub&logoColor=f2f1ef)](https://github.com/hdl/MINGW-packages) [![](https://img.shields.io/website.svg?label=hdl.github.io%2FMINGW-packages&longCache=true&style=flat-square&url=http%3A%2F%2Fhdl.github.io%2FMINGW-packages%2Findex.html&logo=Asciidoctor&logoColor=fff)](https://hdl.github.io/MINGW-packages)
+      - [sylefeb/fpga-binutils](https://github.com/sylefeb/fpga-binutils)
   - ebuild (`portage` | `layman`, [gentoo](https://www.gentoo.org/))
     - [packages.gentoo.org](https://packages.gentoo.org/)
     - [overlays.gentoo.org](https://overlays.gentoo.org/)
