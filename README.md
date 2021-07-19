@@ -17,14 +17,12 @@ This repository is an index for several projects providing *great prepackaged/pr
   - [Conda](https://conda.io) packages
     - [![](https://img.shields.io/badge/hdl-conda--eda-f2f1ef.svg?longCache=true&style=flat-square&logo=GitHub&logoColor=f2f1ef)](https://github.com/hdl/conda-eda) [![](https://img.shields.io/badge/hdl-conda--compilers-f2f1ef.svg?longCache=true&style=flat-square&logo=GitHub&logoColor=f2f1ef)](https://github.com/hdl/conda-compilers) [![](https://img.shields.io/badge/hdl-conda--prog-f2f1ef.svg?longCache=true&style=flat-square&logo=GitHub&logoColor=f2f1ef)](https://github.com/hdl/conda-prog) [![](https://img.shields.io/badge/hdl-conda--misc-f2f1ef.svg?longCache=true&style=flat-square&logo=GitHub&logoColor=f2f1ef)](https://github.com/hdl/conda-misc)
     - [litex-hub/litex-conda-packages](https://github.com/litex-hub/litex-conda-packages)
-- Statically built packages
-  - [YosysHQ/fpga-toolchain](https://github.com/YosysHQ/fpga-toolchain) (GNU/Linux, Windows and macOS).
 - System package managers
   - PKGBUILD (`pacman`)
     - [Arch Linux](https://archlinux.org)
       - [archlinux.org/packages](https://archlinux.org/packages/)
       - [aur.archlinux.org/packages](https://aur.archlinux.org/packages)
-      - [SymbiFlow/symbiflow-arch-pkgs](https://github.com/SymbiFlow/symbiflow-arch-pkgs).
+      - [SymbiFlow/symbiflow-arch-pkgs](https://github.com/SymbiFlow/symbiflow-arch-pkgs)
     - [MSYS2](https://www.msys2.org/) (Windows) [![](https://img.shields.io/badge/hdl-MINGW--packages-f2f1ef.svg?longCache=true&style=flat-square&logo=GitHub&logoColor=f2f1ef)](https://github.com/hdl/MINGW-packages) [![](https://img.shields.io/website.svg?label=hdl.github.io%2FMINGW-packages&longCache=true&style=flat-square&url=http%3A%2F%2Fhdl.github.io%2FMINGW-packages%2Findex.html&logo=Asciidoctor&logoColor=fff)](https://hdl.github.io/MINGW-packages)
       - [sylefeb/fpga-binutils](https://github.com/sylefeb/fpga-binutils)
   - ebuild (`portage` | `layman`, [gentoo](https://www.gentoo.org/))
@@ -47,7 +45,13 @@ This repository is an index for several projects providing *great prepackaged/pr
   - `brew` (macOS)
     - [ktemkin/homebrew-oss-fpga](https://github.com/ktemkin/homebrew-oss-fpga)
 - [WebAssembly](https://webassembly.org/) packages
-  - [YoWASP](http://yowasp.org/).
+  - [YoWASP](http://yowasp.org/)
+- Custom bundles
+  - With statically linked packages
+    - [YosysHQ/fpga-toolchain](https://github.com/YosysHQ/fpga-toolchain) (GNU/Linux, ~~Windows~~ [YosysHQ/fpga-toolchain#78](https://github.com/YosysHQ/fpga-toolchain/issues/78) and macOS; x64)
+  - With dynamically linked packages
+    - [YosysHQ/oss-cad-suite-build](https://github.com/YosysHQ/oss-cad-suite-build) (GNU/Linux, Windows and macOS; x64, arm, armd64 and riscv64)
+      - [YosysHQ/setup-oss-cad-suite](https://github.com/YosysHQ/setup-oss-cad-suite)
 - CIPD (Chrome Infrastructure Package Deployment)
 
 ---
