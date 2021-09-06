@@ -36,6 +36,7 @@ This repository is an index for several projects providing *great prepackaged/pr
   - RPM
     - `dnf` | `yum` ([Fedora](https://getfedora.org))
       - [src.fedoraproject.org](https://src.fedoraproject.org/)
+      - [rezso/HDL](https://copr.fedorainfracloud.org/coprs/rezso/HDL) (CentOS and Fedora; x86_64, aarch64 and ppc64le)
       - [fedoraproject.org/wiki: Electronic Lab](https://fedoraproject.org/wiki/Electronic_Lab) a [lab/spin](https://labs.fedoraproject.org) not available anymore
     - `zypper` | `yast` ([OpenSUSE](https://www.opensuse.org/))
       - [build.opensuse.org | hardware:FPGA](https://build.opensuse.org/project/show/hardware:FPGA)
