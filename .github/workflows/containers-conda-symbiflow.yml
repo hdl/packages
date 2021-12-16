@@ -1,0 +1,177 @@
+# Authors:
+#   Unai Martinez-Corral
+#
+# Copyright 2021 Unai Martinez-Corral <unai.martinezcorral@ehu.eus>
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+name: How to build SymbiFlow examples in CI using conda/symbiflow/* containers from hdl/containers
+
+on:
+  schedule:
+    - cron: '0 0 * * 5'
+  workflow_dispatch:
+
+jobs:
+
+
+  xc7_String:
+    runs-on: ubuntu-latest
+    env:
+      IMAGE: gcr.io/hdl-containers/conda/symbiflow/xc7/a100t
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        repository: SymbiFlow/symbiflow-examples
+
+    - run: docker pull "$IMAGE"
+
+    - run: >-
+        docker run --rm -v $(pwd):/wrk -w /wrk "$IMAGE" bash -lec
+        'TARGET="arty_100" make -C xc7/picosoc_demo'
+
+
+  xc7_HereFile:
+    runs-on: ubuntu-latest
+    env:
+      IMAGE: gcr.io/hdl-containers/conda/symbiflow/xc7/a100t
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        repository: SymbiFlow/symbiflow-examples
+
+    - run: docker pull "$IMAGE"
+
+    - run: |
+        docker run --rm -i -v $(pwd):/wrk -w /wrk "$IMAGE" bash -le <<'EOF'
+          TARGET=arty_100 make -C xc7/picosoc_demo
+        EOF
+
+
+  xc7_File:
+    runs-on: ubuntu-latest
+    env:
+      IMAGE: gcr.io/hdl-containers/conda/symbiflow/xc7/a100t
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        repository: SymbiFlow/symbiflow-examples
+
+    - run: docker pull "$IMAGE"
+
+    - run: |
+        cat > symbiflow-examples-tests.sh <<'EOF'
+        cd $(dirname "$0")
+        TARGET=arty_100 make -C xc7/picosoc_demo
+        EOF
+
+    - run: docker run --rm -v $(pwd):/wrk "$IMAGE" bash -le /wrk/symbiflow-examples-tests.sh
+
+
+  xc7_Shebang:
+    runs-on: ubuntu-latest
+    env:
+      IMAGE: gcr.io/hdl-containers/conda/symbiflow/xc7/a100t
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        repository: SymbiFlow/symbiflow-examples
+
+    - run: docker pull "$IMAGE"
+
+    - run: |
+        cat > symbiflow-examples-tests.sh <<'EOF'
+        #!/usr/bin/env -S bash -le
+        cd $(dirname "$0")
+        TARGET=arty_100 make -C xc7/picosoc_demo
+        EOF
+        chmod +x symbiflow-examples-tests.sh
+
+    - run: docker run --rm -v $(pwd):/wrk "$IMAGE" /wrk/symbiflow-examples-tests.sh
+
+
+  eos-s3_String:
+    runs-on: ubuntu-latest
+    env:
+      IMAGE: gcr.io/hdl-containers/conda/symbiflow/eos-s3
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        repository: SymbiFlow/symbiflow-examples
+
+    - run: docker pull "$IMAGE"
+
+    - run: >-
+        docker run --rm -v $(pwd):/wrk -w /wrk "$IMAGE" bash -lec
+        'make -C eos-s3/btn_counter'
+
+
+  eos-s3_HereFile:
+    runs-on: ubuntu-latest
+    env:
+      IMAGE: gcr.io/hdl-containers/conda/symbiflow/eos-s3
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        repository: SymbiFlow/symbiflow-examples
+
+    - run: docker pull "$IMAGE"
+
+    - run: |
+        docker run --rm -i -v $(pwd):/wrk -w /wrk "$IMAGE" bash -le <<'EOF'
+          make -C eos-s3/btn_counter
+        EOF
+
+
+  eos-s3_File:
+    runs-on: ubuntu-latest
+    env:
+      IMAGE: gcr.io/hdl-containers/conda/symbiflow/eos-s3
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        repository: SymbiFlow/symbiflow-examples
+
+    - run: docker pull "$IMAGE"
+
+    - run: |
+        cat > symbiflow-examples-tests.sh <<'EOF'
+        cd $(dirname "$0")
+        make -C eos-s3/btn_counter
+        EOF
+
+    - run: docker run --rm -v $(pwd):/wrk "$IMAGE" bash -le /wrk/symbiflow-examples-tests.sh
+
+
+  eos-s3_Shebang:
+    runs-on: ubuntu-latest
+    env:
+      IMAGE: gcr.io/hdl-containers/conda/symbiflow/eos-s3
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        repository: SymbiFlow/symbiflow-examples
+
+    - run: docker pull "$IMAGE"
+
+    - run: |
+        cat > symbiflow-examples-tests.sh <<'EOF'
+        #!/usr/bin/env -S bash -le
+        cd $(dirname "$0")
+        make -C eos-s3/btn_counter
+        EOF
+        chmod +x symbiflow-examples-tests.sh
+
+    - run: docker run --rm -v $(pwd):/wrk "$IMAGE" /wrk/symbiflow-examples-tests.sh
