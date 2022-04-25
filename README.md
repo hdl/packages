@@ -54,7 +54,7 @@ This repository is an index for several projects providing *great prepackaged/pr
   - With dynamically linked packages
     - [YosysHQ/oss-cad-suite-build](https://github.com/YosysHQ/oss-cad-suite-build) (GNU/Linux, Windows and macOS; x64, arm, armd64 and riscv64)
       - [YosysHQ/setup-oss-cad-suite](https://github.com/YosysHQ/setup-oss-cad-suite)
-    - [git.libre-soc.org/?p=dev-env-setup](https://git.libre-soc.org/?p=dev-env-setup.git;a=tree;hb=HEAD)
+    - [git.libre-soc.org/?p=dev-env-setup](https://git.libre-soc.org/?p=dev-env-setup.git;a=tree;hb=HEAD) (focused on reproducible stable builds)
 - CIPD (Chrome Infrastructure Package Deployment)
 
 ---
